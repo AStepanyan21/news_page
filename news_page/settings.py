@@ -7,7 +7,7 @@ SECRET_KEY = 'o57abjh4q^-2&ce%0fdj@(va1auy0ez#$=&%s((_xenjankhxz'
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['quiet-plateau-05481.herokuapp.com', '127.0.0.1']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
