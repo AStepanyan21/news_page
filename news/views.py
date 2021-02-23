@@ -28,6 +28,8 @@ def categories_page(request, categories_name):
 
 def detail_page(request, news_id):
     news = News.objects.get(pk=news_id)
+    categories = news.sub_categories.all()
     return render(request, 'news/details.html', {
-        'news': news
+        'news': news,
+        'categories': categories
     })

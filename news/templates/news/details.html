@@ -20,6 +20,22 @@
     <h1>{{news.title}}</h1>
     <span>{{ news.pub_date }}</span>
     <p>{{news.text | safe }}</p>
+    <ul class="list-group list-group-horizontal-md mb-3">
+        <li class="list-group-item">
+            <a href="/categories/{{ news.categories }}/"
+               class="list-group-item list-group-item-action">
+                {{ news.categories }}
+            </a>
+        </li>
+        {% for sub_categories in categories %}
+        <li class="list-group-item">
+            <a href="/categories/{{ sub_categories.name }}/"
+               class="list-group-item list-group-item-action">
+                {{ sub_categories.name }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
 </div>
 
 

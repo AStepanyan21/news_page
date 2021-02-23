@@ -16,8 +16,8 @@
         <a class="p-2 text-dark" href="/">Home</a>
     </nav>
 </header>
-{% if news_list_by_categories or news_list_by_sub_categories %}
 <div class="container">
+    {% if news_list_by_categories or news_list_by_sub_categories %}
     <ul class="list-group">
         {% for news_by_categories in news_list_by_categories %}
         <li class="list-group-item"><a class="list-group-item list-group-item-action"
@@ -30,7 +30,7 @@
         {% endfor %}
     </ul>
     {% else %}
-    <p>No category yet</p>
+    <p>No news yet</p>
     {% endif %}
 </div>
 </body>
